@@ -1,8 +1,6 @@
 "use client"
 import { useLenisScroll } from '@/hooks/useLenisScroll'
-import React, { useRef, useState } from 'react'
-import { projects } from '@/data';
-import { useScroll } from 'motion/react';
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Marquee from '@/components/MarqueeProps';
 import CustomCursor from '@/components/CustomCursor';
@@ -14,11 +12,8 @@ import Preloader from '@/components/Preloader';
 const Page = () => {
     useLenisScroll()
 
-    const container = useRef<HTMLInputElement | null>(null)
-      const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ['start start', 'end end']
-  })
+  
+
     const [showPreloader, setShowPreloader] = useState(true);
   
     const handlePreloaderComplete = () => {
